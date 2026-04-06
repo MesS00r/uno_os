@@ -7,7 +7,7 @@
 int main(void) {
     ubegin(9600);
 
-    uprintln0("hello world!!!");
+    uprint("ssss");
 
     return 0;
 }
