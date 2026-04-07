@@ -2,12 +2,20 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+// #include <usart.hpp>
 #include <usart.hpp>
 
 int main(void) {
     ubegin(9600);
 
-    uprint(123, "sss", 's', 233, "sss", 123, "sss", 's', 233, "sss", 123, "sss", 's', 233, "sss", 123, "sss", 's', 233, "sss");
+    uprint("Hello");
+    uprintln("world");
+
+    uprint("NUMS -> ", 123, ", ", bin(7), ", ", 12, ", ", hex(1111), '\n');
+
+    // Max 20 args!!!
+    uprint("fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23);
+    uprintln("fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23, "fws", 's', 123, "fws", 23);
 
     return 0;
 }
