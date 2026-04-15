@@ -1,5 +1,5 @@
-#ifndef USARTPRINT_H_INCLUDED
-#define USARTPRINT_H_INCLUDED
+#ifndef USARTPRINT_HPP_INCLUDED
+#define USARTPRINT_HPP_INCLUDED
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -185,4 +185,4 @@ inline void endln() { uput_ch('\n'); }
 
 #endif // __cplusplus
 
-#endif //USARTPRINT_H_INCLUDED
+#endif //USARTPRINT_HPP_INCLUDED
