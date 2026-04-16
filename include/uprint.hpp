@@ -172,6 +172,8 @@ void uprint(const Args& ... args) {
  * @tparam Args Тип переменных аргументов.
  * @param args Аргументы.
  * @warning Не используйте для простого перевода строки, используйте endln.
+ * @warning Использует функцию uput_ch.
+ * @see uput_ch
  */
 template<typename ... Args>
 void uprintln(const Args& ... args) {
@@ -179,7 +181,11 @@ void uprintln(const Args& ... args) {
     uput_ch('\n');
 }
 
-/** @brief Просто переносит строку. */
+/**
+ * @brief Просто переносит строку. 
+ * @warning Использует функцию uput_ch.
+ * @see uput_ch
+ */
 inline void endln() { uput_ch('\n'); }
 /** @} result_print_templates */
 
