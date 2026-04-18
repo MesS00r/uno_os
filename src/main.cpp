@@ -7,22 +7,17 @@
 
 int main(void) {
     ubegin(9600);
+    Input::uinput_init();
 
     uprint("Hello ");
     uprintln("world");
 
-    sys_buffer *buf = buffer_init();
-    input_timer_init();
-
-    uset_line(buf);
+    uscan(STR, STR);
 
     char word[8] = {0};
-    uread_word(buf, word, sizeof(word));
-
-    uset_line(buf);
-
     uint16_t num = 0;
-    uread_num(buf, &num);
+
+    uread(s_word(word), s_num(num));
 
     uprintln(word);
     uprintln(num);
